@@ -11,7 +11,7 @@ namespace Lab5.Client
     {
         static async Task Main()
         {
-            var tasks = Enumerable.Range(0, 10000).Select(x => Task.Run(() =>
+            var tasks = Enumerable.Range(0, 100).Select(x => Task.Run(() =>
                 {
                     string host = "127.0.0.1";
                     int port = 9876;
