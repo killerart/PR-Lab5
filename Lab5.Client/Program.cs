@@ -11,10 +11,10 @@ namespace Lab5.Client
     {
         static async Task Main()
         {
+            string host = "127.0.0.1";
+            int port = 9876;
             var tasks = Enumerable.Range(0, 100).Select(x => Task.Run(() =>
                 {
-                    string host = "127.0.0.1";
-                    int port = 9876;
                     using var client = new TcpClient(host, port);
                     Console.WriteLine($"Client {x} connected to TCP server on {host}:{port}");
 
